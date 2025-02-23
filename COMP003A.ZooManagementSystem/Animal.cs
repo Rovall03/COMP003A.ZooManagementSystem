@@ -10,7 +10,7 @@ namespace COMP003A.ZooManagementSystem
     {
         private string _name;
         private string _species;
-
+       public int Age { get; set; }
         public string Name
             {
             get { return _name; }
@@ -18,7 +18,7 @@ namespace COMP003A.ZooManagementSystem
             
             set {
                 if(string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentNullException("must eb=nter a name");
+                    throw new ArgumentNullException("Must enter a name");
                 
                 _name = value;
             }
@@ -33,6 +33,7 @@ namespace COMP003A.ZooManagementSystem
                     _species = value; }
         }
 
+      
         public abstract void MakeSound();
 
     }
